@@ -31,7 +31,7 @@ function loadTasks() {
                 <div class="task-field">${task.due}</div>
                 <div class="task-field">${task.priority}</div>
                 <div class="task-field">${task.description}</div>
-                <button>Edit</button>
+                <button onclick="editTask(${index})">Edit</button>
                 &nbsp;&nbsp;&nbsp;
                 <button class="delete-btn" onclick="deleteTask(${index})">×</button>
             </div>
@@ -78,8 +78,7 @@ function editTask(index) {
             description: document.getElementById('edit-task-description').value,
         };
         localStorage.setItem('tasks', JSON.stringify(tasks));
-        displayTasks(tasks);
-        closeModal();
+        window.location.href = "index.html"
     };
 }
 
