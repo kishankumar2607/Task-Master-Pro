@@ -125,7 +125,7 @@ form select:focus,
 }
 
 button {
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 16px;
   font-weight: 600;
   text-align: center;
@@ -315,4 +315,59 @@ button:hover {
   p {
     font-size: 12px;
   }
+}
+
+/* Style for task rows */
+.task-row {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.113);
+}
+
+/* Styling fields inside each row */
+.task-field {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Background colors based on priority */
+.priority-high {
+  background-color: #f51b1b20; /* Pastel light red for high priority */
+}
+
+.priority-medium {
+  background-color: #ff82052a; /* Pastel light orange for medium priority */
+}
+
+.priority-low {
+  background-color: #ffffff; /* White for low priority */
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #ff3333;
+}
+
+#add-task-button {
+  background-color: black;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  margin: 20px 35%;
 }

@@ -40,13 +40,13 @@
             <input
               type="text"
               id="task-name"
-              placeholder="Task Name"
+              placeholder="Task Name *"
               required
             />
             <input
               type="text"
               id="task-assigned"
-              placeholder="Assigned To"
+              placeholder="Assigned To *"
               required
             />
             <input type="date" id="task-due" placeholder="Due Date" required />
@@ -58,10 +58,10 @@
             </select>
             <textarea
               id="task-description"
-              placeholder="Description"
-              required
+              placeholder="Description (optional)"
+              maxlength="250"
             ></textarea>
-            <button type="submit">Add Task</button>
+            <button id="submit" type="submit">Add Task</button>
           </form>
         </div>
       </div>
@@ -72,7 +72,7 @@
         <p>Copyright &copy; 2024 TaskMaster Pro. All Rights Reserved.</p>
       </div>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/addTask.js"></script>
   </body>
 </html>
