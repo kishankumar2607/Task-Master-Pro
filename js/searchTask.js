@@ -1,11 +1,11 @@
-// Get references to search input and search results container
+//Get search input and results container references.
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
 
 // Load tasks from localStorage
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// Function to display filtered tasks based on search query
+// Show tasks that match the search query.
 function displayTasks(filteredTasks) {
     searchResults.innerHTML = ""; // Clear previous results
 
@@ -14,7 +14,7 @@ function displayTasks(filteredTasks) {
         return;
     }
 
-    // Loop through the filtered tasks and display them
+    // Show the filtered tasks one by one.
     filteredTasks.forEach((task) => {
         const priorityClass = getPriorityClass(task.priority);
 
@@ -38,7 +38,7 @@ function displayTasks(filteredTasks) {
 function filterTasks(query) {
     const searchQuery = query.toLowerCase();
 
-    // Filter tasks to only those that contain the search query in any field
+    // Show only tasks that match the search query.
     const filteredTasks = tasks.filter(
         (task) =>
             task.name.toLowerCase().includes(searchQuery) ||
@@ -60,7 +60,7 @@ searchInput.addEventListener("input", () => {
 // Display all tasks on page load
 displayTasks(tasks);
 
-// Helper function to get priority class based on priority value
+// Function to get priority class from priority value
 function getPriorityClass(priority) {
     switch (priority.toLowerCase()) {
         case "high":
